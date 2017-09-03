@@ -1,0 +1,177 @@
+$icons: (0:0)
+$icons: map-merge($icons,('cart': (X: -253px, Y:-101px, W: 17px, H: 15px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('catalog': (X: -253px, Y:-152px, W: 15px, H: 14px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('facebook': (X: -175px, Y:-131px, W: 10px, H: 19px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('facebook@2x': (X: -253px, Y:0px, W: 20px, H: 38px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('fb': (X: -203px, Y:-50px, W: 40px, H: 40px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('home': (X: -253px, Y:-126px, W: 14px, H: 16px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ins': (X: -203px, Y:-100px, W: 40px, H: 40px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('location': (X: -125px, Y:-92px, W: 12px, H: 17px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('logo-footer': (X: 0px, Y:0px, W: 193px, H: 45px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('logo': (X: 0px, Y:-55px, W: 133px, H: 27px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('mastercard': (X: 0px, Y:-175px, W: 50px, H: 30px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('paypal': (X: -76px, Y:-131px, W: 89px, H: 23px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('phone': (X: -253px, Y:-176px, W: 13px, H: 16px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('qiwi': (X: 0px, Y:-131px, W: 66px, H: 34px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('search': (X: -253px, Y:-48px, W: 18px, H: 17px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('special': (X: -253px, Y:-75px, W: 17px, H: 16px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('tw': (X: -203px, Y:0px, W: 40px, H: 40px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('user': (X: -203px, Y:-150px, W: 13px, H: 13px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('visa': (X: -143px, Y:-55px, W: 47px, H: 15px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('webmoney': (X: 0px, Y:-92px, W: 115px, H: 29px, TW: 273px, TH: 205px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+//
+//.icon-cart
+//  width: 17px
+//  height: 15px
+//  background-image: url('../img/sprite.png')
+//  background-position: -253px -101px
+//
+//.icon-catalog
+//  width: 15px
+//  height: 14px
+//  background-image: url('../img/sprite.png')
+//  background-position: -253px -152px
+//
+//.icon-facebook
+//  width: 10px
+//  height: 19px
+//  background-image: url('../img/sprite.png')
+//  background-position: -175px -131px
+//
+//.icon-facebook@2x
+//  width: 20px
+//  height: 38px
+//  background-image: url('../img/sprite.png')
+//  background-position: -253px 0px
+//
+//.icon-fb
+//  width: 40px
+//  height: 40px
+//  background-image: url('../img/sprite.png')
+//  background-position: -203px -50px
+//
+//.icon-home
+//  width: 14px
+//  height: 16px
+//  background-image: url('../img/sprite.png')
+//  background-position: -253px -126px
+//
+//.icon-ins
+//  width: 40px
+//  height: 40px
+//  background-image: url('../img/sprite.png')
+//  background-position: -203px -100px
+//
+//.icon-location
+//  width: 12px
+//  height: 17px
+//  background-image: url('../img/sprite.png')
+//  background-position: -125px -92px
+//
+//.icon-logo-footer
+//  width: 193px
+//  height: 45px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-logo
+//  width: 133px
+//  height: 27px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -55px
+//
+//.icon-mastercard
+//  width: 50px
+//  height: 30px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -175px
+//
+//.icon-paypal
+//  width: 89px
+//  height: 23px
+//  background-image: url('../img/sprite.png')
+//  background-position: -76px -131px
+//
+//.icon-phone
+//  width: 13px
+//  height: 16px
+//  background-image: url('../img/sprite.png')
+//  background-position: -253px -176px
+//
+//.icon-qiwi
+//  width: 66px
+//  height: 34px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -131px
+//
+//.icon-search
+//  width: 18px
+//  height: 17px
+//  background-image: url('../img/sprite.png')
+//  background-position: -253px -48px
+//
+//.icon-special
+//  width: 17px
+//  height: 16px
+//  background-image: url('../img/sprite.png')
+//  background-position: -253px -75px
+//
+//.icon-tw
+//  width: 40px
+//  height: 40px
+//  background-image: url('../img/sprite.png')
+//  background-position: -203px 0px
+//
+//.icon-user
+//  width: 13px
+//  height: 13px
+//  background-image: url('../img/sprite.png')
+//  background-position: -203px -150px
+//
+//.icon-visa
+//  width: 47px
+//  height: 15px
+//  background-image: url('../img/sprite.png')
+//  background-position: -143px -55px
+//
+//.icon-webmoney
+//  width: 115px
+//  height: 29px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -92px
+//

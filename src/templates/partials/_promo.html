@@ -1,0 +1,19 @@
+<!-- BEGIN promo -->
+<div class="promo">
+	<div class="promo__inner">
+		{% for unit in promoList.promo %}
+			<!-- BEGIN promo__col -->
+			<div class="promo__col">
+				{# promo item #}
+				{{mixins.promoItem({
+					class: unit.class,
+					title: unit.title,
+					text: unit.text | safe,
+					btn: unit.btn | safe
+				})}}
+			</div>
+			<!-- END promo__col -->
+		{% endfor %}
+	</div>
+</div>
+<!-- END promo -->

@@ -1,0 +1,58 @@
+<!-- BEGIN header -->
+<header class="header">
+
+	<div class="inner">
+
+		<!-- BEGIN header__col1 -->
+		<div class="header__col1">
+			<a href="#" class="logo"><h1>extra v</h1></a>
+			<button type="button" class="btn btn-catalog">
+				<i class="icon-catalog"></i>
+				<span>каталог</span>
+			</button>
+		</div>
+		<!-- END header__col1 -->
+
+		<!-- BEGIN header__col3 -->
+		<div class="header__col3">
+			<div class="schedule">
+				<div class="schedule__week">Пн - Пт: 9:00 - 18:00</div>
+				{% set  tel = ['8 (495) <b>979 94 88</b>', '8 (901) <b>519 94 88</b>'] %}
+				<ul class="schedule__tel">
+					{% for telItem in tel %} <li> {{telItem | safe }} </li> {% endfor %}
+				</ul>
+			</div>
+			<button type="button" class="btn btn-login js-login">
+				<i class="icon-user"></i>
+				<span>Войти</span>
+			</button>
+			<button type="button" class="btn btn-cart js-cart">
+				<i class="icon-cart"></i>
+				<span>Корзина</span>
+			</button>
+		</div>
+		<!-- END header__col3 -->
+
+		<!-- BEGIN header__col2 -->
+		<div class="header__col2">
+			{% set nav = ['О компании', 'Доставка', 'Контакты', 'Спецпредложения'] %}
+			<ul class="top-nav">
+				{% for item in nav %} 
+					<li class="top-nav__item"><a href="#" class="top-nav__link">{{item}}</a></li> 
+				{% endfor %}
+			</ul>
+			<div class="search">
+				<form action="/">
+					<input type="search" placeholder="Поиск товаров" class="search__input input">
+					<button type="submit" class="search__btn"></button>
+				</form>
+			</div>
+		</div>
+		<!-- END header__col2 -->
+
+		
+
+	</div>
+
+</header>
+<!-- END header -->

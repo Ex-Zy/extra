@@ -1,0 +1,85 @@
+.footer
+	position: relative
+	box-shadow: inset 1px 4px 4px rgba(0, 0, 0, 0.04)
+	background-color: $gray
+	color: $secondary-color
+	padding: 38px 0 32px
+	&__col1
+		float: left
+		margin-right: 50px
+	&__col2
+		float: left
+	&__col3
+		overflow: hidden
+		text-align: right
+		padding: 12px 0 0
+.copy
+	font-size: 12px
+	max-width: 230px
+	display: inline-block
+	margin: 23px 0 0
+	line-height: 1.5 
+.logo-footer
+	+hide-text
+	+s(logo-footer)
+	display: block
+.list
+	line-height: 1.2
+	margin: 10px 0 0
+	li
+		&:not(:last-of-type)
+			margin: 0 0 16px
+	a
+		color: $secondary-color
+		+tr(color 0.3s)
+		&:hover
+			color: lighten($secondary-color, 15%)
+.social,
+.pay
+	font-size: 0
+	display: inline-block
+	vertical-align: top
+	li
+		display: inline-block
+		vertical-align: middle
+		&:not(:last-of-type)
+			margin-right: 15px
+	a
+		+tr(opacity 0.3)
+		&:hover
+			opacity: 0.6
+.pay
+	margin-top: 60px
+	display: block
+	li
+		height: 60px
+		+vertical
+		&:not(:last-of-type)
+			margin-right: 42px
+	a
+		display: inline-block
+		vertical-align: middle
+.communications
+	display: inline-block
+	vertical-align: top
+	text-align: left
+	margin-right: 80px
+	&__schedule
+		float: none
+		display: block
+		li
+			position: relative
+			&:first-of-type
+				padding-left: 20px
+		i
+			position: absolute
+			left: 0
+			top: 1px
+	&__location
+		margin-top: 10px
+		padding-left: 20px
+		position: relative
+		i
+			position: absolute
+			left: 0
+			top: 2px

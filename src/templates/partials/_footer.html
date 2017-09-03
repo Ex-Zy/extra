@@ -1,0 +1,57 @@
+<!-- BEGIN footer -->
+<footer class="footer">
+	<div class="inner">
+		
+		<!-- BEGIN footer__col1 -->
+		<div class="footer__col1">
+			<a href="#" class="logo-footer">extra v</a>
+			<div class="copy">
+				© 2012-2013 <br>
+				"Extra-v" - торговля хозяйственными товарами и комплексное обслуживание корпоративных клиентов
+			</div>
+		</div>
+		<!-- END footer__col1 -->
+
+		<!-- BEGIN footer__col2 -->
+		<div class="footer__col2">
+			{% set list = ['О компании', 'Доставка', 'Контакты', 'Каталог', 'Спецпредложения'] %}
+			<ul class="list">
+				{% for item in list %} <li><a href="#">{{item}}</a></li> {% endfor %}
+			</ul>
+		</div>
+		<!-- END footer__col2 -->
+
+		<!-- BEGIN footer__col3 -->
+		<div class="footer__col3">
+			<div class="communications">
+				<div class="communications__schedule schedule">
+					{% set  tel = ['8 (495) <b>979 94 88</b>', '8 (901) <b>519 94 88</b>'] %}
+					<ul class="schedule__tel">
+						{% for telItem in tel %} 
+							{% if loop.first%} 
+								<li> <i class="icon-phone"></i> {{telItem | safe }} </li> 
+							{% else %} 
+								<li> {{telItem | safe }} </li> 
+							{% endif %}
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="communications__location">
+					<i class="icon-location"></i>
+					г. Москва, ул. Правды д. 24 стр. 7
+				</div>
+			</div>
+			{% set socList = ['icon-fb', 'icon-tw', 'icon-ins'] %}
+			<ul class="social">
+				{% for socItem in socList %} <li><a href="#"><i class="{{socItem}}"></i></a></li> {% endfor %}
+			</ul>
+			{% set payList = ['icon-webmoney', 'icon-paypal', 'icon-qiwi', 'icon-mastercard', 'icon-visa'] %}
+			<ul class="pay">
+				{% for payItem in payList %} <li><a href="#"><i class="{{payItem}}"></i></a></li> {% endfor %}
+			</ul>
+		</div>
+		<!-- END footer__col3 -->
+
+	</div>
+</footer>
+<!-- END footer -->

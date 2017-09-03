@@ -1,0 +1,25 @@
+{% macro icon(i) %}
+<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% endmacro %}
+
+
+{% macro promoItem(options) %}
+<!-- BEGIN promo-item -->
+	<div class="promo-item {% if options.class %} {{options.class}} {% endif %}">
+		{% if options.title %}
+			<h3 class="promo-item__title">{{options.title}}</h3>
+		{% else %}
+			<h3 class="promo-item__title">Default title</h3>
+		{% endif %}
+
+		{% if options.text %}
+			<div class="promo-item__text">{{options.text}}</div>
+		{% else %}
+			<div class="promo-item__text">Default text</div>
+		{% endif %}
+
+		{% if options.btn %} {{options.btn}} {% endif %}
+	</div>
+	<!-- END promo__item -->
+
+{% endmacro %}

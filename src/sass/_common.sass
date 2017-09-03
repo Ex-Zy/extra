@@ -1,0 +1,117 @@
+//vars
+$gray: #f2f2f2
+$orange: #ff8400
+$black: #000
+$white: #fff
+$secondary-color: #646464
+
+//icons
+[class*="icon"]
+	display: inline-block
+	vertical-align: middle
+.icon-catalog
+	+s(catalog)
+.icon-user
+	+s(user)
+.icon-cart
+	+s(cart)
+.icon-fb
+	+s(fb)
+.icon-tw
+	+s(tw)
+.icon-ins
+	+s(ins)
+.icon-webmoney
+	+s(webmoney)
+.icon-paypal
+	+s(paypal)
+.icon-qiwi
+	+s(qiwi)
+.icon-mastercard
+	+s(mastercard)
+.icon-visa
+	+s(visa)
+.icon-phone
+	+s(phone)
+.icon-location
+	+s(location)
+body
+	background: $white
+	font-size: 14px
+	line-height: 1.4
+	+reg
+a
+	text-decoration: none
+	color: #646464
+
+.btn
+	display: inline-block
+	padding: 5px 10px
+	vertical-align: top
+	text-align: center
+	color: $black
+	background-color: $gray
+	border-radius: 6px
+	height: 40px
+	cursor: pointer
+	position: relative
+	text-transform: uppercase
+	+bold
+	font-size: 14px
+	+tr(background-color 0.3s)
+	span
+		display: inline-block
+		vertical-align: middle
+	&:active
+		top: 1px
+.btn-catalog
+	padding: 5px 19px
+	margin: 30px 0 0
+	color: $white
+	background-color: $orange
+	&:hover
+		background-color: lighten($orange, 10%)
+	span
+		margin-left: 5px
+.btn-login,
+.btn-cart
+	&:hover
+		background-color: lighten($gray, 1%)
+.btn-login
+	padding: 5px 15px
+	margin-right: 20px
+	i
+		margin: 0 2px 0 0
+.btn-cart
+	padding: 5px 22px
+	i
+		margin: 0 2px 0 0
+.input
+	display: block
+	width: 100%
+	box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.15)
+	border-radius: 6px
+	background-color: $gray
+	+reg
+	font-size: 14px
+	color: $black
+	padding: 11px 40px 11px 20px
+	&:focus
+		box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.15), 1px 2px 2px rgba(0, 0, 0, 0.15)
+	+placeholder
+		color: $black
+	&::-webkit-search-cancel-button
+		-webkit-appearance: none
+.search
+	position: relative
+	margin: 20px 0 0
+	max-width: 537px
+	&__btn
+		display: block
+		position: absolute
+		top: 0
+		right: 17px
+		bottom: 0
+		margin: auto
+		+s(search)
+		background-color: transparent 

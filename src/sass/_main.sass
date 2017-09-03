@@ -1,0 +1,37 @@
+.inner
+	max-width: 1140px
+	padding: 0 20px
+	margin: 0 auto
+	+clr
+.breadcrumbs
+	padding: 30px 0
+.breadcrumbs-list
+	position: relative
+	font-size: 12px
+	&__item
+		display: inline-block
+		vertical-align: middle
+		+light
+		&:first-of-type
+			a
+				position: relative
+				padding-left: 20px
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					left: 0
+					top: 0
+					+tr(opacity 0.3)
+					+s(home)
+		a
+			font-size: inherit
+			font-family: inherit 
+			cursor: pointer
+			display: inline-block
+			&:hover
+				text-decoration: underline
+				&:before
+					opacity: 0.8
+		span
+			+bold

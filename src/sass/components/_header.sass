@@ -1,0 +1,63 @@
+.header
+	padding: 24px 0 0
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.3)
+	&__col1
+		width: 187px
+		float: left
+		+lg
+			width: 163px
+	&__col2
+		overflow: hidden
+		padding: 0 18px 19px 0
+	&__col3
+		float: right
+		width: 280px
+		text-align: right
+.logo
+	+hide-text
+	+s(logo)
+	display: block
+.top-nav
+	padding: 16px 0 0
+	&__item
+		display: inline-block
+		vertical-align: top
+		line-height: 1
+		&:not(:last-of-type)
+			margin-right: 43px
+			+lg
+				margin-right: 25px
+		&:last-of-type
+			a
+				position: relative
+				padding-left: 20px
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					top: 0
+					left: 0
+					+s(special)
+
+	&__link
+		color: #000
+		font-size: 14px
+		+bold
+		&:hover
+			transition: color 0.3s
+			color: lighten(#000, 35%)
+.schedule
+	margin: -10px 0 20px
+	&__week
+		+light
+		text-align: right
+		font-size: 12px
+	&__tel
+		margin: 4px 0 0
+		li
+			display: inline-block
+			vertical-align: middle
+			&:not(:last-of-type)
+				margin-right: 18px
+		b
+			+bold

@@ -1,0 +1,14 @@
+<!-- BEGIN breadcrumbs -->
+<div class="breadcrumbs">
+	{% set list = ["Каталог", "Бытовая химия", "Чистящие средства", "Чистящее средство «Пемолюкс»"] %}
+	<ul class="breadcumbs-list">
+		{% for item in list %}
+			{% if loop.last %}
+				<li class="breadcrumbs-list__item"><span>{{item}}</span></li>
+			{% else %}
+				<li class="breadcrumbs-list__item"><a href="#" class="breadcrumbs-list__link">{{item}}</a> /</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</div>
+<!-- END breadcrumbs -->
