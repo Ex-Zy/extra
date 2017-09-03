@@ -1,9 +1,47 @@
 {% import "../data/promo.html" as promoList %}
+{% import "../data/slider.html" as slider %}
 <!-- BEGIN main -->
 <section class="main">
 	<div class="inner">
 		{# partial breadcrumbs #}
 		{% include "partials/_breadcrumbs.html" %}
+
+		<!-- BEGIN slider-wrp -->
+		<div class="slider-wrp">
+			<h2 class="title">С этим товаром покупают:</h2>
+			<!-- BEGIN slider -->
+			<div class="slider js-slider-extra">
+				{% for slide in slider.slides %}
+					{{mixins.item({
+						img: slide.img,
+						description: slide.description,
+						price: slide.price
+					})}}
+				{% endfor %}
+			</div>
+			<!-- END slider -->
+		</div>
+		<!-- END slider-wrp -->
+
+		<!-- BEGIN slider-wrp -->
+		<div class="slider-wrp">
+			<h2 class="title">Выгодная покупка</h2>
+			<!-- BEGIN slider -->
+			<div class="slider js-slider-advantages">
+				{% for slide in slider.slides %}
+					{{mixins.item({
+						img: slide.img,
+						description: slide.description,
+						price: slide.price
+					})}}
+				{% endfor %}
+			</div>
+			<!-- END slider -->
+		</div>
+		<!-- END slider-wrp -->
+
+		
+
 		{# partial promo #}
 		{% include "partials/_promo.html" %}
 	</div>

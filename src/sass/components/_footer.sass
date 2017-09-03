@@ -31,9 +31,10 @@
 			margin: 0 0 16px
 	a
 		color: $secondary-color
-		+tr(color 0.3s)
+		display: block
+		+tr(transform 0.3s)
 		&:hover
-			color: lighten($secondary-color, 15%)
+			transform: translateX(6px)
 .social,
 .pay
 	font-size: 0

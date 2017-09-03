@@ -35,3 +35,79 @@
 					opacity: 0.8
 		span
 			+bold
+.slider
+	margin: 0 -14px
+	.slick-list
+		padding: 30px 0
+	&__item
+		padding: 12px 20px 60px
+		position: relative
+		background-color: #fff
+		box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.15)
+		border-radius: 6px
+		min-height: 376px
+		font-size: 16px
+	.slick-arrow
+		+hide-text
+	.slick-prev,
+	.slick-next
+		width: 44px
+		height: 91px
+		background: url(../img/arrow-left-bg.png) no-repeat center
+		top: 31.5%
+		left: -3px
+		position: absolute
+		z-index: 10
+		&:before
+			content: ''
+			display: block
+			+s(arrow-left)
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			margin: auto
+	.slick-next
+		background: url(../img/arrow-right-bg.png) no-repeat center
+		left: auto
+		right: -3px
+		&:before
+			+s(arrow-right)
+	.btn-cart
+		background-color: $orange
+		color: #fff
+		float: right
+		padding: 5px 17px
+		&:hover
+			background-color: lighten($orange, 5%) 
+
+.item
+	margin: 0 14px
+	&__media
+		height: 191px
+		position: relative
+		overflow: hidden
+		img
+			max-width: 100%
+			max-height: 100%
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			margin: auto
+	&__description
+		height: 70px
+		overflow: hidden
+		margin: 5px 0 0
+	&__price
+		+bold
+		+text-overflow
+	&__footer
+		position: absolute
+		left: 20px
+		right: 20px
+		bottom: 20px
+		+clr

@@ -2,7 +2,7 @@
 <svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
 
-
+{# promo item #}
 {% macro promoItem(options) %}
 <!-- BEGIN promo-item -->
 	<div class="promo-item {% if options.class %} {{options.class}} {% endif %}">
@@ -22,4 +22,38 @@
 	</div>
 	<!-- END promo__item -->
 
+{% endmacro %}
+
+{# slider item #}
+
+{% macro item(config) %}
+	<div class="slider__item item">
+		<div class="item__media">
+			{% if config.img %}
+				<img src="img/items/{{config.img}}" alt="">
+			{% else %}
+				Картинка отсудствует
+			{% endif %}
+		</div>
+		<div class="item__description">
+			{% if config.description %}
+				{{config.description}}
+			{% else %}
+				Описание отсудствует
+			{% endif %}
+		</div>
+		<div class="item__price">
+			{% if config.price %}
+				{{config.price}}
+			{% else %}
+				Цена отсудствует
+			{% endif %}
+		</div>
+		<div class="item__footer">
+			<select></select>
+			<button type="button" class="btn btn-cart js-cart">
+				<span>в корзину</span>
+			</button>
+		</div>
+	</div>
 {% endmacro %}
