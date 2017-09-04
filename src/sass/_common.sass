@@ -35,6 +35,9 @@ $secondary-color: #646464
 	+s(phone)
 .icon-location
 	+s(location)
+.icon-check
+	+s(check)
+	
 body
 	background: $white
 	font-size: 14px
@@ -90,6 +93,12 @@ a
 		margin: 0 2px 0 0
 .btn-cart
 	padding: 5px 22px
+	&_orange
+		background-color: $orange
+		color: #fff
+		padding: 5px 17px
+		&:hover
+			background-color: lighten($orange, 5%) 
 	i
 		margin: 0 2px 0 0
 .input

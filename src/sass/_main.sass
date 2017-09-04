@@ -38,7 +38,7 @@
 .slider
 	margin: 0 -14px
 	.slick-list
-		padding: 30px 0
+		padding: 30px 0 90px
 	&__item
 		padding: 12px 20px 60px
 		position: relative
@@ -74,14 +74,32 @@
 		right: -3px
 		&:before
 			+s(arrow-right)
+	.slick-dots
+		font-size: 0
+		position: absolute
+		left: 0
+		right: 0
+		text-align: center
+		bottom: 50px
+		button
+			+hide-text
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background-color: transparent
+			border: 1px solid #b8b8b8
+			transition: background-color 0.3s, border-color 0.3s
+		li
+			display: inline-block
+			vertical-align: middle
+			padding: 0 5px
+			&.slick-active
+				button
+					background-color: #ff9524
+					border-color: #ff9524
 	.btn-cart
-		background-color: $orange
-		color: #fff
 		float: right
-		padding: 5px 17px
-		&:hover
-			background-color: lighten($orange, 5%) 
-
+		
 .item
 	margin: 0 14px
 	&__media

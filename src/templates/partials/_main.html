@@ -3,8 +3,12 @@
 <!-- BEGIN main -->
 <section class="main">
 	<div class="inner">
+
 		{# partial breadcrumbs #}
 		{% include "partials/_breadcrumbs.html" %}
+
+		{# partial product #}
+		{% include "partials/_product.html" %}
 
 		<!-- BEGIN slider-wrp -->
 		<div class="slider-wrp">
@@ -23,6 +27,9 @@
 		</div>
 		<!-- END slider-wrp -->
 
+		{# partial promo #}
+		{% include "partials/_promo.html" %}
+
 		<!-- BEGIN slider-wrp -->
 		<div class="slider-wrp">
 			<h2 class="title">Выгодная покупка</h2>
@@ -39,11 +46,7 @@
 			<!-- END slider -->
 		</div>
 		<!-- END slider-wrp -->
-
 		
-
-		{# partial promo #}
-		{% include "partials/_promo.html" %}
 	</div>
 </section>
 <!-- END main -->
