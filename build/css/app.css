@@ -302,7 +302,7 @@ html {
   background-image: url("../img/sprite.png");
   width: 10px;
   height: 8px;
-  background-position: -253px -27px;
+  background-position: -253px -63px;
 }
 
 body {
@@ -451,6 +451,65 @@ a {
   height: 17px;
   background-position: -175px -131px;
   background-color: transparent;
+}
+
+.number {
+  width: 80px;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.number__input {
+  width: 100%;
+  padding: 10px 35px 10px 5px;
+  line-height: 1.3;
+  font-family: "TT Prosto Sans Regular", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  background-color: #e4e4e4;
+  text-align: center;
+  color: #000;
+  display: block;
+  box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.number__plus, .number__minus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 20px;
+  width: 30px;
+  background-color: #e4e4e4;
+  z-index: 2;
+}
+
+.number__plus:before, .number__minus:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-image: url("../img/sprite.png");
+  width: 10px;
+  height: 8px;
+  background-position: -253px -45px;
+}
+
+.number__minus {
+  bottom: 0;
+  top: auto;
+}
+
+.number__minus:before {
+  background-image: url("../img/sprite.png");
+  width: 11px;
+  height: 8px;
+  background-position: -253px -27px;
 }
 
 .inner {
@@ -1036,14 +1095,14 @@ a {
   display: inline-block;
   vertical-align: top;
   max-width: 536px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  background-color: #fff;
 }
 
 .product-slider__item {
   padding: 30px 30px 60px;
   min-height: 526px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 6px;
-  background-color: #fff;
 }
 
 .product-slider__title {
@@ -1236,30 +1295,46 @@ a {
 
 .product-thumbs .slick-list {
   padding: 0 14px;
-  margin: 0 -14px;
+  margin: 43px -14px;
 }
 
 .product-thumbs .slick-arrow {
-  width: 104px;
-  height: 55px;
-  background: url(../img/arrow-top-bg.png) no-repeat center;
+  width: 80px;
+  height: 31px;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
-  position: relative;
+  position: absolute;
   top: 10px;
-  left: -10px;
+  left: 0;
+  background: none;
+  z-index: 20;
 }
 
-.product-thumbs .slick-arrow:before {
+.product-thumbs .slick-arrow:after, .product-thumbs .slick-arrow:before {
   content: '';
   display: block;
   position: absolute;
+}
+
+.product-thumbs .slick-arrow:after {
+  top: -8px;
+  left: -12px;
+  right: -12px;
+  bottom: -24px;
+  width: 104px;
+  height: 55px;
+  background: url(../img/arrow-top-bg.png) no-repeat center;
+  background-size: contain;
+}
+
+.product-thumbs .slick-arrow:before {
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   margin: auto;
+  z-index: 1;
   background-image: url("../img/sprite.png");
   width: 28px;
   height: 10px;
@@ -1268,8 +1343,7 @@ a {
 
 .product-thumbs .slick-next {
   background: url(../img/arrow-bottom-bg.png) no-repeat center;
-  bottom: 10px;
-  left: -10px;
+  bottom: 0;
   top: auto;
 }
 
@@ -1278,6 +1352,11 @@ a {
   width: 28px;
   height: 10px;
   background-position: -159px -92px;
+}
+
+.product-thumbs .slick-next:after {
+  background: url(../img/arrow-bottom-bg.png) no-repeat center;
+  background-size: contain;
 }
 
 @media (min-width: 1100px) {

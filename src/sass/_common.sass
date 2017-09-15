@@ -129,4 +129,45 @@ a
 		bottom: 0
 		margin: auto
 		+s(search)
-		background-color: transparent 
+		background-color: transparent
+.number
+	width: 80px
+	border-radius: 4px
+	display: inline-block
+	vertical-align: top
+	position: relative
+	&__input
+		width: 100%
+		padding: 10px 35px 10px 5px
+		line-height: 1.3
+		+reg
+		font-size: 16px
+		background-color: #e4e4e4
+		text-align: center
+		color: $black
+		display: block
+		box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.15)
+	&__plus,
+	&__minus
+		position: absolute
+		top: 0
+		right: 0
+		height: 20px
+		width: 30px
+		background-color: #e4e4e4
+		z-index: 2
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			margin: auto
+			+s(plus)
+	&__minus
+		bottom: 0
+		top: auto
+		&:before
+			+s(minus)

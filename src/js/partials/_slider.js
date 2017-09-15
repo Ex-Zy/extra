@@ -11,7 +11,7 @@ function initSlider(slider, options) {
 
 initSlider(SLIDER_EXTRA, {
 	slidesToShow: 4,
-	autoplay: true,
+	// autoplay: true,
 	speed: 800,
 	autoplaySpeed: 4000,
 	dots: true
@@ -19,7 +19,7 @@ initSlider(SLIDER_EXTRA, {
 
 initSlider(SLIDER_ADVANAGES, {
 	slidesToShow: 4,
-	autoplay: true,
+	// autoplay: true,
 	speed: 800,
 	autoplaySpeed: 4000,
 	dots: true

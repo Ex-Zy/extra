@@ -16,12 +16,12 @@
 	display: inline-block
 	vertical-align: top
 	max-width: 536px
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15)
+	border-radius: 6px
+	background-color: #fff
 	&__item
 		padding: 30px 30px 60px
 		min-height: 526px
-		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15)
-		border-radius: 6px
-		background-color: #fff
 	&__title
 		font-size: 24px
 		+bold
@@ -152,29 +152,44 @@
 			margin: auto
 	.slick-list
 		padding: 0 14px
-		margin: 0 -14px
+		margin: 43px -14px
 	.slick-arrow
-		width: 104px
-		height: 55px
-		background: url(../img/arrow-top-bg.png) no-repeat center
+		width: 80px
+		height: 31px
 		+hide-text
-		position: relative
+		position: absolute
 		top: 10px
-		left: -10px
+		left: 0
+		background: none
+		z-index: 20
+		&:after,
 		&:before
 			content: ''
 			display: block
 			position: absolute
+		&:after
+			top: -8px
+			left: -12px
+			right: -12px
+			bottom: -24px
+			width: 104px
+			height: 55px
+			background: url(../img/arrow-top-bg.png) no-repeat center
+			background-size: contain
+		&:before
 			left: 0
 			right: 0
 			top: 0
 			bottom: 0
 			margin: auto
+			z-index: 1
 			+s(arrow-top)
 	.slick-next
 		background: url(../img/arrow-bottom-bg.png) no-repeat center
-		bottom: 10px
-		left: -10px
+		bottom: 0
 		top: auto
 		&:before
 			+s(arrow-bottom)
+		&:after
+			background: url(../img/arrow-bottom-bg.png) no-repeat center
+			background-size: contain

@@ -50,7 +50,11 @@
 			{% endif %}
 		</div>
 		<div class="item__footer">
-			<select></select>
+			<div class="number js-number">
+				<input type="text" class="number__input" value="5" data-max-value="99">
+				<button type="button" class="number__plus" data-plus></button>
+				<button type="button" class="number__minus" data-minus></button>
+			</div>
 			<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
 				<span>в корзину</span>
 			</button>
