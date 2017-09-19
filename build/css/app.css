@@ -435,7 +435,7 @@ a {
 
 .search {
   position: relative;
-  margin: 20px 0 0;
+  margin: 22px 0 0;
   max-width: 537px;
 }
 
@@ -805,7 +805,7 @@ a {
 }
 
 .schedule {
-  margin: -10px 0 20px;
+  margin: -10px 0 26px;
 }
 
 .schedule__week {
@@ -1094,7 +1094,7 @@ a {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  max-width: 536px;
+  width: calc(100% - 94px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
   background-color: #fff;
@@ -1277,8 +1277,9 @@ a {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
   background-color: #ffffff;
-  margin: 7px 0;
+  margin: 8px 0;
   z-index: 10;
+  cursor: pointer;
 }
 
 .product-thumbs__item.slick-slide img {
@@ -1295,7 +1296,7 @@ a {
 
 .product-thumbs .slick-list {
   padding: 0 14px;
-  margin: 43px -14px;
+  margin: 33px -14px 33px;
 }
 
 .product-thumbs .slick-arrow {
@@ -1305,7 +1306,7 @@ a {
   text-shadow: none;
   color: transparent;
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 0;
   background: none;
   z-index: 20;

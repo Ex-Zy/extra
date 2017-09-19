@@ -1,337 +1,41 @@
+{% import "../data/sliderProduct.html" as slider %}
+{% import "../data/sliderDescription.html" as sliderDescr %}
 <!-- BEGIN product -->
 <div class="product">
 	<div class="product__col1">
-		<div class="product-slider js-slider-product">
-			<div class="product-slider__item">
-				<div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-				<div class="product-slider__art">Артикул: 17635504</div>
-				<div class="product-slider__media">
-					<img src="img/product.jpg" alt="">
-				</div>
-				<div class="product-slider__footer">
-					<ul class="product-slider__extra">
-						<li><i class="icon-check"></i>В наличии</li>
-						<li><i class="icon-check"></i>Самовывоз доступен</li>
-					</ul>
-					<div class="product-slider__left">
-						<div class="price">
-							<span>Цена</span>
-							222 руб
-						</div>
-					</div>
-					<div class="product-slider__right">
-						<select></select>
-						<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button>
-					</div>
-				</div>
-				<div class="product-slider__info">
-					<span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span>
-				</div>
+		<div class="product-slider">
+			<div class="product-slider__in js-slider-product">
+				{% for slide in slider.slide %}
+					{{mixins.productSliderItem({
+						title: slide.title,
+						art: slide.art,
+						media: slide.media,
+						extra: slide.extra,
+						price: slide.price
+					})}}
+				{% endfor %}
 			</div>
-			<div class="product-slider__item">
-				<div class="product-slider__title">Универсальное средство </div>
-				<div class="product-slider__art">Артикул: 13123123</div>
-				<div class="product-slider__media">
-					<img src="http://via.placeholder.com/1350x150" alt="">
-				</div>
-				<div class="product-slider__footer">
-					<ul class="product-slider__extra">
-						<li><i class="icon-check"></i>В наличии</li>
-						<li><i class="icon-check"></i>Самовывоз доступен</li>
-					</ul>
-					<div class="product-slider__left">
-						<div class="price">
-							<span>Цена</span>
-							222 руб
-						</div>
-					</div>
-					<div class="product-slider__right">
-						<select></select>
-						<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button>
-					</div>
-				</div>
-				<div class="product-slider__info">
-					<span>Бесплатная доставка</span>
-				</div>
-			</div>
-			<div class="product-slider__item">
-				<div class="product-slider__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, necessitatibus. </div>
-				<div class="product-slider__art">Артикул: 17635504</div>
-				<div class="product-slider__media">
-					<img src="http://via.placeholder.com/350x1150" alt="">
-				</div>
-				<div class="product-slider__footer">
-					<ul class="product-slider__extra">
-						<li><i class="icon-check"></i>В наличии</li>
-						<li><i class="icon-check"></i>Самовывоз доступен</li>
-					</ul>
-					<div class="product-slider__left">
-						<div class="price">
-							<span>Цена</span>
-							222 руб
-						</div>
-					</div>
-					<div class="product-slider__right">
-						<select></select>
-						<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button>
-					</div>
-				</div>
-				<div class="product-slider__info">
-					<span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span>
-				</div>
-			</div>
-			<div class="product-slider__item">
-				<div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-				<div class="product-slider__art">Артикул: 17635504</div>
-				<div class="product-slider__media">
-					<img src="http://via.placeholder.com/500x900" alt="">
-				</div>
-				<div class="product-slider__footer">
-					<ul class="product-slider__extra">
-						<li><i class="icon-check"></i>В наличии</li>
-						<li><i class="icon-check"></i>Самовывоз доступен</li>
-					</ul>
-					<div class="product-slider__left">
-						<div class="price">
-							<span>Цена</span>
-							222 руб
-						</div>
-					</div>
-					<div class="product-slider__right">
-						<select></select>
-						<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button>
-					</div>
-				</div>
-				<div class="product-slider__info">
-					<span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span>
-				</div>
-			</div>
-			<div class="product-slider__item">
-				<div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-				<div class="product-slider__art">Артикул: 17635504</div>
-				<div class="product-slider__media">
-					<img src="http://via.placeholder.com/1350x1350" alt="">
-				</div>
-				<div class="product-slider__footer">
-					<ul class="product-slider__extra">
-						<li><i class="icon-check"></i>В наличии</li>
-						<li><i class="icon-check"></i>Самовывоз доступен</li>
-					</ul>
-					<div class="product-slider__left">
-						<div class="price">
-							<span>Цена</span>
-							222 руб
-						</div>
-					</div>
-					<div class="product-slider__right">
-						<select></select>
-						<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button>
-					</div>
-				</div>
-				<div class="product-slider__info">
-					<span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span>
-				</div>
-			</div>
-			<div class="product-slider__item">
-				<div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-				<div class="product-slider__art">Артикул: 17635504</div>
-				<div class="product-slider__media">
-					<img src="img/product.jpg" alt="">
-				</div>
-				<div class="product-slider__footer">
-					<ul class="product-slider__extra">
-						<li><i class="icon-check"></i>В наличии</li>
-						<li><i class="icon-check"></i>Самовывоз доступен</li>
-					</ul>
-					<div class="product-slider__left">
-						<div class="price">
-							<span>Цена</span>
-							222 руб
-						</div>
-					</div>
-					<div class="product-slider__right">
-						<select></select>
-						<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button>
-					</div>
-				</div>
-				<div class="product-slider__info">
-					<span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span>
-				</div>
-			</div>
-			<div class="product-slider__item">
-				<div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-				<div class="product-slider__art">Артикул: 17635504</div>
-				<div class="product-slider__media">
-					<img src="img/product.jpg" alt="">
-				</div>
-				<div class="product-slider__footer">
-					<ul class="product-slider__extra">
-						<li><i class="icon-check"></i>В наличии</li>
-						<li><i class="icon-check"></i>Самовывоз доступен</li>
-					</ul>
-					<div class="product-slider__left">
-						<div class="price">
-							<span>Цена</span>
-							222 руб
-						</div>
-					</div>
-					<div class="product-slider__right">
-						<select></select>
-						<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button>
-					</div>
-				</div>
-				<div class="product-slider__info">
-					<span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span>
-				</div>
-			</div>
-			<div class="product-slider__item">
-				<div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-				<div class="product-slider__art">Артикул: 17635504</div>
-				<div class="product-slider__media">
-					<img src="img/product.jpg" alt="">
-				</div>
-				<div class="product-slider__footer">
-					<ul class="product-slider__extra">
-						<li><i class="icon-check"></i>В наличии</li>
-						<li><i class="icon-check"></i>Самовывоз доступен</li>
-					</ul>
-					<div class="product-slider__left">
-						<div class="price">
-							<span>Цена</span>
-							222 руб
-						</div>
-					</div>
-					<div class="product-slider__right">
-						<select></select>
-						<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button>
-					</div>
-				</div>
-				<div class="product-slider__info">
-					<span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span>
-				</div>
-			</div>
-			<div class="product-slider__item">
-				<div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-				<div class="product-slider__art">Артикул: 17635504</div>
-				<div class="product-slider__media">
-					<img src="img/product.jpg" alt="">
-				</div>
-				<div class="product-slider__footer">
-					<ul class="product-slider__extra">
-						<li><i class="icon-check"></i>В наличии</li>
-						<li><i class="icon-check"></i>Самовывоз доступен</li>
-					</ul>
-					<div class="product-slider__left">
-						<div class="price">
-							<span>Цена</span>
-							222 руб
-						</div>
-					</div>
-					<div class="product-slider__right">
-						<select></select>
-						<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button>
-					</div>
-				</div>
-				<div class="product-slider__info">
-					<span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span>
-				</div>
-			</div>
-			<div class="product-slider__item">
-				<div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-				<div class="product-slider__art">Артикул: 17635504</div>
-				<div class="product-slider__media">
-					<img src="img/product.jpg" alt="">
-				</div>
-				<div class="product-slider__footer">
-					<ul class="product-slider__extra">
-						<li><i class="icon-check"></i>В наличии</li>
-						<li><i class="icon-check"></i>Самовывоз доступен</li>
-					</ul>
-					<div class="product-slider__left">
-						<div class="price">
-							<span>Цена</span>
-							222 руб
-						</div>
-					</div>
-					<div class="product-slider__right">
-						<select></select>
-						<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button>
-					</div>
-				</div>
-				<div class="product-slider__info">
-					<span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span>
-				</div>
+			<div class="product-slider__info">
+				<span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span>
 			</div>
 		</div>
 		<div class="product-thumbs js-slider-thumbs">
-			<div class="product-thumbs__item"><img src="img/thumbs/thumb1.jpg" alt=""></div>
-			<div class="product-thumbs__item"><img src="img/thumbs/thumb2.jpg" alt=""></div>
-			<div class="product-thumbs__item"><img src="img/thumbs/thumb3.jpg" alt=""></div>
-			<div class="product-thumbs__item"><img src="img/thumbs/thumb4.jpg" alt=""></div>
-			<div class="product-thumbs__item"><img src="img/thumbs/thumb5.jpg" alt=""></div>
-			<div class="product-thumbs__item"><img src="img/thumbs/thumb1.jpg" alt=""></div>
-			<div class="product-thumbs__item"><img src="img/thumbs/thumb2.jpg" alt=""></div>
-			<div class="product-thumbs__item"><img src="img/thumbs/thumb3.jpg" alt=""></div>
-			<div class="product-thumbs__item"><img src="img/thumbs/thumb4.jpg" alt=""></div>
-			<div class="product-thumbs__item"><img src="img/thumbs/thumb5.jpg" alt=""></div>
+
+			{% set thumbs = ['thumb1.jpg', 'thumb2.jpg', 'thumb3.jpg', 'thumb4.jpg', 'thumb5.jpg', 'thumb1.jpg', 'thumb2.jpg', 'thumb3.jpg', 'thumb4.jpg', 'thumb5.jpg'] %}
+
+			{% for thumbsItem in thumbs %}
+				<div class="product-thumbs__item"><img src="img/thumbs/{{thumbsItem}}" alt=""></div>
+			{% endfor %}
+			
 		</div>
 	</div>
-	<div class="product__col2">
-		<div class="product-desc">
-			<div class="product-desc__top">
-				<div class="alert alert_warning">
-					«Пемолюкс» удаляет неприятные запахи и придает помещению свежий аромат, а также обеспечивает гигиеническую чистоту вашего жилища.
-				</div>
-			</div>
-			<div class="product-desc__body">
-				<table class="product-table">
-					<tr>
-						<td>Артикул</td>
-						<td>17635504</td>
-					</tr>
-					<tr>
-						<td>Вес, кг</td>
-						<td>500</td>
-					</tr>
-					<tr>
-						<td>Страна-производитель</td>
-						<td>Россия</td>
-					</tr>
-					<tr>
-						<td>Назначение:</td>
-						<td>Для ежедневной уборки поверхностей из керамики, металла, пластика и других водостойких поверхностей</td>
-					</tr>
-					<tr>
-						<td>Марка: </td>
-						<td>Easywork</td>
-					</tr>
-					<tr>
-						<td>Объем, мл: </td>
-						<td>500</td>
-					</tr>
-				</table>
-			</div>
-		</div>
+	<div class="product__col2 js-slider-descr">
+		{% for sliderItem in sliderDescr.slides %}
+			{{mixins.sliderDescription({
+				alert: sliderItem.alert,
+				table: sliderItem.table
+			})}}
+		{% endfor %}
 	</div>
 </div>
 <!-- END product -->

@@ -25,7 +25,6 @@
 {% endmacro %}
 
 {# slider item #}
-
 {% macro item(config) %}
 	<div class="slider__item item">
 		<div class="item__media">
@@ -58,6 +57,87 @@
 			<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
 				<span>в корзину</span>
 			</button>
+		</div>
+	</div>
+{% endmacro %}
+
+{# slider for product #}
+{% macro productSliderItem(options) %}
+	<div class="product-slider__item">
+
+		{% if options.title %}
+		<div class="product-slider__title">{{options.title}}</div>
+		{% else %}
+		<div class="product-slider__title">Default title</div>
+		{% endif %}
+
+		{% if options.art %}
+		<div class="product-slider__art">{{options.art}}</div>
+		{% else %}
+		<div class="product-slider__art">Default art</div>
+		{% endif %}
+
+		<div class="product-slider__media">
+			{% if options.media %}
+				<img src="{{options.media}}" alt="">
+			{% endif %}
+		</div>
+
+		<div class="product-slider__footer">
+
+			{% if options.extra %}
+				<ul class="product-slider__extra">
+				{% for item in options.extra %}
+					<li><i class="icon-check"></i>{{item}}</li>
+				{% endfor %}
+				</ul>
+			{% endif %}
+
+			<div class="product-slider__left">
+				{% if options.price %}
+					<div class="price">
+						<span>Цена</span>
+						{{options.price}}
+					</div>
+				{% endif %}
+			</div>
+			<div class="product-slider__right">
+				<div class="number js-number">
+					<input type="text" class="number__input" value="5" data-max-value="99">
+					<button type="button" class="number__plus" data-plus></button>
+					<button type="button" class="number__minus" data-minus></button>
+				</div>
+				<button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
+					<span>в корзину</span>
+				</button>
+			</div>
+
+		</div>
+
+	</div>
+{% endmacro %}
+
+{# slider for descriptons product #}
+{% macro sliderDescription(options) %}
+	<div class="product-desc">
+		<div class="product-desc__top">
+			<div class="alert alert_warning">
+				{% if options.alert %}
+					{{options.alert}}
+				{% else %}
+					Default alert
+				{% endif %}
+			</div>
+		</div>
+		<div class="product-desc__body">
+			<table class="product-table">
+				{% for key, value in options.table %}
+					<tr>
+						<td>{{key}}</td>
+						<td>{{value}}</td>
+					</tr>
+				{% endfor %}
+			</table>
 		</div>
 	</div>
 {% endmacro %}

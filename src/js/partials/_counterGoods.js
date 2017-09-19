@@ -1,20 +1,20 @@
-class Input {
+class CounterGoods {
 	constructor(component) {
 		this.component = component;
 		this.btnAdd = component.find('[data-plus]');
-		this.btnDown = component.find('[data-minus]');
+		this.btnRomove = component.find('[data-minus]');
 		this.input = component.find('input');
 
 		this._controlUp();
 		this._controlDown();
-		this._inputValue();
+		this._editValue();
 	}
 	_controlUp() {
 		let up = this.btnAdd;
 		up.click(this._clickOnControlHandler);
 	}
 	_controlDown() {
-		let down = this.btnDown;
+		let down = this.btnRomove;
 		down.click(this._clickOnControlHandler);
 	}
 	_clickOnControlHandler(e) {
@@ -33,19 +33,26 @@ class Input {
 			input.val(value - 1);
 		}
 	}
-	_editTextHandler() {
-		
-	}
-	_inputValue() {
+	_editValue() {
 		let field = this.input;
 
-		field.on('keyup', function() {
+		field.on('change keyup input click', function() {
 			let value = $(this).val();
 			let maxValue = +$(this).data('max-value');
-			let reg = /[^0-9.]/;
+			let reg = /[^0-9]/g;
 
-			if(reg.test(value)) {
+			if(value.match(reg)) {
 				value = value.replace(reg, '');
+				$(this).val(value);
+			}
+
+			if(value.length > 3) {
+				value = value.slice(0, 3);
+				$(this).val(value);
+			}
+
+			if(value > maxValue) {
+				value = maxValue;
 				$(this).val(value);
 			}
 		});
@@ -53,4 +60,4 @@ class Input {
 
 }
 
-new Input($('.js-number'));
+new CounterGoods($('.js-number'));

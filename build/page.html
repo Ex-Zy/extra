@@ -50,7 +50,7 @@
               <li class="top-nav__item"><a href="#" class="top-nav__link">Спецпредложения</a></li>
             </ul>
             <div class="search">
-              <form action="/"> <input type="search" placeholder="Поиск товаров" class="search__input input"> <button type="submit" class="search__btn"></button> </form>
+              <form action="/"> <input type="text" placeholder="Поиск товаров" class="search__input input"> <button type="submit" class="search__btn"></button> </form>
             </div>
           </div>
           <!-- END header__col2 -->
@@ -73,187 +73,200 @@
           <!-- BEGIN product -->
           <div class="product">
             <div class="product__col1">
-              <div class="product-slider js-slider-product">
-                <div class="product-slider__item">
-                  <div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-                  <div class="product-slider__art">Артикул: 17635504</div>
-                  <div class="product-slider__media"> <img src="img/product.jpg" alt=""> </div>
-                  <div class="product-slider__footer">
-                    <ul class="product-slider__extra">
-                      <li><i class="icon-check"></i>В наличии</li>
-                      <li><i class="icon-check"></i>Самовывоз доступен</li>
-                    </ul>
-                    <div class="product-slider__left">
-                      <div class="price"> <span>Цена</span> 222 руб </div>
+              <div class="product-slider">
+                <div class="product-slider__in js-slider-product">
+                  <div class="product-slider__item">
+                    <div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер»</div>
+                    <div class="product-slider__art">Артикул: 17635504</div>
+                    <div class="product-slider__media"> <img src="img/product.jpg" alt=""> </div>
+                    <div class="product-slider__footer">
+                      <ul class="product-slider__extra">
+                        <li><i class="icon-check"></i>В наличии</li>
+                        <li><i class="icon-check"></i>Самовывоз доступен</li>
+                      </ul>
+                      <div class="product-slider__left">
+                        <div class="price"> <span>Цена</span> 222 руб </div>
+                      </div>
+                      <div class="product-slider__right">
+                        <div class="number js-number"> <input type="text" class="number__input" value="5" data-max-value="99"> <button type="button" class="number__plus" data-plus></button> <button type="button" class="number__minus" data-minus></button> </div> <button type="button"
+                          class="btn btn-cart btn-cart_orange js-add-to-cart">
+					<span>в корзину</span>
+				</button> </div>
                     </div>
-                    <div class="product-slider__right"> <select></select> <button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button> </div>
                   </div>
-                  <div class="product-slider__info"> <span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span> </div>
-                </div>
-                <div class="product-slider__item">
-                  <div class="product-slider__title">Универсальное средство </div>
-                  <div class="product-slider__art">Артикул: 13123123</div>
-                  <div class="product-slider__media"> <img src="http://via.placeholder.com/1350x150" alt=""> </div>
-                  <div class="product-slider__footer">
-                    <ul class="product-slider__extra">
-                      <li><i class="icon-check"></i>В наличии</li>
-                      <li><i class="icon-check"></i>Самовывоз доступен</li>
-                    </ul>
-                    <div class="product-slider__left">
-                      <div class="price"> <span>Цена</span> 222 руб </div>
+                  <div class="product-slider__item">
+                    <div class="product-slider__title">Cредство от тараканов «Таран бах»</div>
+                    <div class="product-slider__art">Артикул: 936331</div>
+                    <div class="product-slider__media"> <img src="http://via.placeholder.com/350x150" alt=""> </div>
+                    <div class="product-slider__footer">
+                      <ul class="product-slider__extra">
+                        <li><i class="icon-check"></i>В наличии</li>
+                        <li><i class="icon-check"></i>Самовывоз доступен</li>
+                      </ul>
+                      <div class="product-slider__left">
+                        <div class="price"> <span>Цена</span> 34 руб </div>
+                      </div>
+                      <div class="product-slider__right">
+                        <div class="number js-number"> <input type="text" class="number__input" value="5" data-max-value="99"> <button type="button" class="number__plus" data-plus></button> <button type="button" class="number__minus" data-minus></button> </div> <button type="button"
+                          class="btn btn-cart btn-cart_orange js-add-to-cart">
+					<span>в корзину</span>
+				</button> </div>
                     </div>
-                    <div class="product-slider__right"> <select></select> <button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button> </div>
                   </div>
-                  <div class="product-slider__info"> <span>Бесплатная доставка</span> </div>
-                </div>
-                <div class="product-slider__item">
-                  <div class="product-slider__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, necessitatibus. </div>
-                  <div class="product-slider__art">Артикул: 17635504</div>
-                  <div class="product-slider__media"> <img src="http://via.placeholder.com/350x1150" alt=""> </div>
-                  <div class="product-slider__footer">
-                    <ul class="product-slider__extra">
-                      <li><i class="icon-check"></i>В наличии</li>
-                      <li><i class="icon-check"></i>Самовывоз доступен</li>
-                    </ul>
-                    <div class="product-slider__left">
-                      <div class="price"> <span>Цена</span> 222 руб </div>
+                  <div class="product-slider__item">
+                    <div class="product-slider__title">Cредство от наркоманов «Наркоман бах»</div>
+                    <div class="product-slider__art">Артикул: 84324234</div>
+                    <div class="product-slider__media"> <img src="http://via.placeholder.com/450x350" alt=""> </div>
+                    <div class="product-slider__footer">
+                      <ul class="product-slider__extra">
+                        <li><i class="icon-check"></i>В наличии</li>
+                        <li><i class="icon-check"></i>Самовывоз доступен</li>
+                      </ul>
+                      <div class="product-slider__left">
+                        <div class="price"> <span>Цена</span> 492 руб </div>
+                      </div>
+                      <div class="product-slider__right">
+                        <div class="number js-number"> <input type="text" class="number__input" value="5" data-max-value="99"> <button type="button" class="number__plus" data-plus></button> <button type="button" class="number__minus" data-minus></button> </div> <button type="button"
+                          class="btn btn-cart btn-cart_orange js-add-to-cart">
+					<span>в корзину</span>
+				</button> </div>
                     </div>
-                    <div class="product-slider__right"> <select></select> <button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button> </div>
                   </div>
-                  <div class="product-slider__info"> <span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span> </div>
-                </div>
-                <div class="product-slider__item">
-                  <div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-                  <div class="product-slider__art">Артикул: 17635504</div>
-                  <div class="product-slider__media"> <img src="http://via.placeholder.com/500x900" alt=""> </div>
-                  <div class="product-slider__footer">
-                    <ul class="product-slider__extra">
-                      <li><i class="icon-check"></i>В наличии</li>
-                      <li><i class="icon-check"></i>Самовывоз доступен</li>
-                    </ul>
-                    <div class="product-slider__left">
-                      <div class="price"> <span>Цена</span> 222 руб </div>
+                  <div class="product-slider__item">
+                    <div class="product-slider__title">Cредство от имбицилов «Имбицил бах»</div>
+                    <div class="product-slider__art">Артикул: 936331</div>
+                    <div class="product-slider__media"> <img src="http://via.placeholder.com/150x150" alt=""> </div>
+                    <div class="product-slider__footer">
+                      <ul class="product-slider__extra">
+                        <li><i class="icon-check"></i>В наличии</li>
+                        <li><i class="icon-check"></i>Самовывоз доступен</li>
+                      </ul>
+                      <div class="product-slider__left">
+                        <div class="price"> <span>Цена</span> 394 руб </div>
+                      </div>
+                      <div class="product-slider__right">
+                        <div class="number js-number"> <input type="text" class="number__input" value="5" data-max-value="99"> <button type="button" class="number__plus" data-plus></button> <button type="button" class="number__minus" data-minus></button> </div> <button type="button"
+                          class="btn btn-cart btn-cart_orange js-add-to-cart">
+					<span>в корзину</span>
+				</button> </div>
                     </div>
-                    <div class="product-slider__right"> <select></select> <button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button> </div>
                   </div>
-                  <div class="product-slider__info"> <span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span> </div>
-                </div>
-                <div class="product-slider__item">
-                  <div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-                  <div class="product-slider__art">Артикул: 17635504</div>
-                  <div class="product-slider__media"> <img src="http://via.placeholder.com/1350x1350" alt=""> </div>
-                  <div class="product-slider__footer">
-                    <ul class="product-slider__extra">
-                      <li><i class="icon-check"></i>В наличии</li>
-                      <li><i class="icon-check"></i>Самовывоз доступен</li>
-                    </ul>
-                    <div class="product-slider__left">
-                      <div class="price"> <span>Цена</span> 222 руб </div>
+                  <div class="product-slider__item">
+                    <div class="product-slider__title">Cредство от моли «Моль умри»</div>
+                    <div class="product-slider__art">Артикул: 936331</div>
+                    <div class="product-slider__media"> <img src="http://via.placeholder.com/900x900" alt=""> </div>
+                    <div class="product-slider__footer">
+                      <ul class="product-slider__extra">
+                        <li><i class="icon-check"></i>В наличии</li>
+                        <li><i class="icon-check"></i>Самовывоз доступен</li>
+                      </ul>
+                      <div class="product-slider__left">
+                        <div class="price"> <span>Цена</span> 911 руб </div>
+                      </div>
+                      <div class="product-slider__right">
+                        <div class="number js-number"> <input type="text" class="number__input" value="5" data-max-value="99"> <button type="button" class="number__plus" data-plus></button> <button type="button" class="number__minus" data-minus></button> </div> <button type="button"
+                          class="btn btn-cart btn-cart_orange js-add-to-cart">
+					<span>в корзину</span>
+				</button> </div>
                     </div>
-                    <div class="product-slider__right"> <select></select> <button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button> </div>
                   </div>
-                  <div class="product-slider__info"> <span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span> </div>
-                </div>
-                <div class="product-slider__item">
-                  <div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-                  <div class="product-slider__art">Артикул: 17635504</div>
-                  <div class="product-slider__media"> <img src="img/product.jpg" alt=""> </div>
-                  <div class="product-slider__footer">
-                    <ul class="product-slider__extra">
-                      <li><i class="icon-check"></i>В наличии</li>
-                      <li><i class="icon-check"></i>Самовывоз доступен</li>
-                    </ul>
-                    <div class="product-slider__left">
-                      <div class="price"> <span>Цена</span> 222 руб </div>
+                  <div class="product-slider__item">
+                    <div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер»</div>
+                    <div class="product-slider__art">Артикул: 17635504</div>
+                    <div class="product-slider__media"> <img src="img/product.jpg" alt=""> </div>
+                    <div class="product-slider__footer">
+                      <ul class="product-slider__extra">
+                        <li><i class="icon-check"></i>В наличии</li>
+                        <li><i class="icon-check"></i>Самовывоз доступен</li>
+                      </ul>
+                      <div class="product-slider__left">
+                        <div class="price"> <span>Цена</span> 222 руб </div>
+                      </div>
+                      <div class="product-slider__right">
+                        <div class="number js-number"> <input type="text" class="number__input" value="5" data-max-value="99"> <button type="button" class="number__plus" data-plus></button> <button type="button" class="number__minus" data-minus></button> </div> <button type="button"
+                          class="btn btn-cart btn-cart_orange js-add-to-cart">
+					<span>в корзину</span>
+				</button> </div>
                     </div>
-                    <div class="product-slider__right"> <select></select> <button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button> </div>
                   </div>
-                  <div class="product-slider__info"> <span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span> </div>
-                </div>
-                <div class="product-slider__item">
-                  <div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-                  <div class="product-slider__art">Артикул: 17635504</div>
-                  <div class="product-slider__media"> <img src="img/product.jpg" alt=""> </div>
-                  <div class="product-slider__footer">
-                    <ul class="product-slider__extra">
-                      <li><i class="icon-check"></i>В наличии</li>
-                      <li><i class="icon-check"></i>Самовывоз доступен</li>
-                    </ul>
-                    <div class="product-slider__left">
-                      <div class="price"> <span>Цена</span> 222 руб </div>
+                  <div class="product-slider__item">
+                    <div class="product-slider__title">Cредство от тараканов «Таран бах»</div>
+                    <div class="product-slider__art">Артикул: 936331</div>
+                    <div class="product-slider__media"> <img src="http://via.placeholder.com/350x150" alt=""> </div>
+                    <div class="product-slider__footer">
+                      <ul class="product-slider__extra">
+                        <li><i class="icon-check"></i>В наличии</li>
+                        <li><i class="icon-check"></i>Самовывоз доступен</li>
+                      </ul>
+                      <div class="product-slider__left">
+                        <div class="price"> <span>Цена</span> 34 руб </div>
+                      </div>
+                      <div class="product-slider__right">
+                        <div class="number js-number"> <input type="text" class="number__input" value="5" data-max-value="99"> <button type="button" class="number__plus" data-plus></button> <button type="button" class="number__minus" data-minus></button> </div> <button type="button"
+                          class="btn btn-cart btn-cart_orange js-add-to-cart">
+					<span>в корзину</span>
+				</button> </div>
                     </div>
-                    <div class="product-slider__right"> <select></select> <button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button> </div>
                   </div>
-                  <div class="product-slider__info"> <span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span> </div>
-                </div>
-                <div class="product-slider__item">
-                  <div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-                  <div class="product-slider__art">Артикул: 17635504</div>
-                  <div class="product-slider__media"> <img src="img/product.jpg" alt=""> </div>
-                  <div class="product-slider__footer">
-                    <ul class="product-slider__extra">
-                      <li><i class="icon-check"></i>В наличии</li>
-                      <li><i class="icon-check"></i>Самовывоз доступен</li>
-                    </ul>
-                    <div class="product-slider__left">
-                      <div class="price"> <span>Цена</span> 222 руб </div>
+                  <div class="product-slider__item">
+                    <div class="product-slider__title">Cредство от наркоманов «Наркоман бах»</div>
+                    <div class="product-slider__art">Артикул: 84324234</div>
+                    <div class="product-slider__media"> <img src="http://via.placeholder.com/450x350" alt=""> </div>
+                    <div class="product-slider__footer">
+                      <ul class="product-slider__extra">
+                        <li><i class="icon-check"></i>В наличии</li>
+                        <li><i class="icon-check"></i>Самовывоз доступен</li>
+                      </ul>
+                      <div class="product-slider__left">
+                        <div class="price"> <span>Цена</span> 492 руб </div>
+                      </div>
+                      <div class="product-slider__right">
+                        <div class="number js-number"> <input type="text" class="number__input" value="5" data-max-value="99"> <button type="button" class="number__plus" data-plus></button> <button type="button" class="number__minus" data-minus></button> </div> <button type="button"
+                          class="btn btn-cart btn-cart_orange js-add-to-cart">
+					<span>в корзину</span>
+				</button> </div>
                     </div>
-                    <div class="product-slider__right"> <select></select> <button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button> </div>
                   </div>
-                  <div class="product-slider__info"> <span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span> </div>
-                </div>
-                <div class="product-slider__item">
-                  <div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-                  <div class="product-slider__art">Артикул: 17635504</div>
-                  <div class="product-slider__media"> <img src="img/product.jpg" alt=""> </div>
-                  <div class="product-slider__footer">
-                    <ul class="product-slider__extra">
-                      <li><i class="icon-check"></i>В наличии</li>
-                      <li><i class="icon-check"></i>Самовывоз доступен</li>
-                    </ul>
-                    <div class="product-slider__left">
-                      <div class="price"> <span>Цена</span> 222 руб </div>
+                  <div class="product-slider__item">
+                    <div class="product-slider__title">Cредство от имбицилов «Имбицил бах»</div>
+                    <div class="product-slider__art">Артикул: 936331</div>
+                    <div class="product-slider__media"> <img src="http://via.placeholder.com/150x150" alt=""> </div>
+                    <div class="product-slider__footer">
+                      <ul class="product-slider__extra">
+                        <li><i class="icon-check"></i>В наличии</li>
+                        <li><i class="icon-check"></i>Самовывоз доступен</li>
+                      </ul>
+                      <div class="product-slider__left">
+                        <div class="price"> <span>Цена</span> 394 руб </div>
+                      </div>
+                      <div class="product-slider__right">
+                        <div class="number js-number"> <input type="text" class="number__input" value="5" data-max-value="99"> <button type="button" class="number__plus" data-plus></button> <button type="button" class="number__minus" data-minus></button> </div> <button type="button"
+                          class="btn btn-cart btn-cart_orange js-add-to-cart">
+					<span>в корзину</span>
+				</button> </div>
                     </div>
-                    <div class="product-slider__right"> <select></select> <button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button> </div>
                   </div>
-                  <div class="product-slider__info"> <span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span> </div>
-                </div>
-                <div class="product-slider__item">
-                  <div class="product-slider__title">Универсальное средство для мытья полов «Мистер Пропер» </div>
-                  <div class="product-slider__art">Артикул: 17635504</div>
-                  <div class="product-slider__media"> <img src="img/product.jpg" alt=""> </div>
-                  <div class="product-slider__footer">
-                    <ul class="product-slider__extra">
-                      <li><i class="icon-check"></i>В наличии</li>
-                      <li><i class="icon-check"></i>Самовывоз доступен</li>
-                    </ul>
-                    <div class="product-slider__left">
-                      <div class="price"> <span>Цена</span> 222 руб </div>
+                  <div class="product-slider__item">
+                    <div class="product-slider__title">Cредство от моли «Моль умри»</div>
+                    <div class="product-slider__art">Артикул: 936331</div>
+                    <div class="product-slider__media"> <img src="http://via.placeholder.com/900x900" alt=""> </div>
+                    <div class="product-slider__footer">
+                      <ul class="product-slider__extra">
+                        <li><i class="icon-check"></i>В наличии</li>
+                        <li><i class="icon-check"></i>Самовывоз доступен</li>
+                      </ul>
+                      <div class="product-slider__left">
+                        <div class="price"> <span>Цена</span> 911 руб </div>
+                      </div>
+                      <div class="product-slider__right">
+                        <div class="number js-number"> <input type="text" class="number__input" value="5" data-max-value="99"> <button type="button" class="number__plus" data-plus></button> <button type="button" class="number__minus" data-minus></button> </div> <button type="button"
+                          class="btn btn-cart btn-cart_orange js-add-to-cart">
+					<span>в корзину</span>
+				</button> </div>
                     </div>
-                    <div class="product-slider__right"> <select></select> <button type="button" class="btn btn-cart btn-cart_orange js-add-to-cart">
-							<span>в корзину</span>
-						</button> </div>
                   </div>
-                  <div class="product-slider__info"> <span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span> </div>
                 </div>
+                <div class="product-slider__info"> <span>Бесплатная доставка по Москве при заказе на сумму от 5 000 рублей</span> </div>
               </div>
               <div class="product-thumbs js-slider-thumbs">
                 <div class="product-thumbs__item"><img src="img/thumbs/thumb1.jpg" alt=""></div>
@@ -268,7 +281,7 @@
                 <div class="product-thumbs__item"><img src="img/thumbs/thumb5.jpg" alt=""></div>
               </div>
             </div>
-            <div class="product__col2">
+            <div class="product__col2 js-slider-descr">
               <div class="product-desc">
                 <div class="product-desc__top">
                   <div class="alert alert_warning"> «Пемолюкс» удаляет неприятные запахи и придает помещению свежий аромат, а также обеспечивает гигиеническую чистоту вашего жилища. </div>
@@ -292,12 +305,309 @@
                       <td>Для ежедневной уборки поверхностей из керамики, металла, пластика и других водостойких поверхностей</td>
                     </tr>
                     <tr>
-                      <td>Марка: </td>
+                      <td>Марка:</td>
                       <td>Easywork</td>
                     </tr>
                     <tr>
-                      <td>Объем, мл: </td>
+                      <td>Объем, мл:</td>
                       <td>500</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="product-desc">
+                <div class="product-desc__top">
+                  <div class="alert alert_warning"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt pulvinar diam, id moles </div>
+                </div>
+                <div class="product-desc__body">
+                  <table class="product-table">
+                    <tr>
+                      <td>Артикул</td>
+                      <td>225613</td>
+                    </tr>
+                    <tr>
+                      <td>Вес, кг</td>
+                      <td>123</td>
+                    </tr>
+                    <tr>
+                      <td>Страна-производитель</td>
+                      <td>Ukraine</td>
+                    </tr>
+                    <tr>
+                      <td>Назначение:</td>
+                      <td>Для ежедневной уборки поверхностей из керамики, металла, пластика и других водостойких поверхностей</td>
+                    </tr>
+                    <tr>
+                      <td>Марка:</td>
+                      <td>Easywork</td>
+                    </tr>
+                    <tr>
+                      <td>Объем, мл:</td>
+                      <td>1000</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="product-desc">
+                <div class="product-desc__top">
+                  <div class="alert alert_warning"> Curabitur in sem dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In non porttitor lacus. Sed placerat vulputate scelerisque. </div>
+                </div>
+                <div class="product-desc__body">
+                  <table class="product-table">
+                    <tr>
+                      <td>Артикул</td>
+                      <td>9432413</td>
+                    </tr>
+                    <tr>
+                      <td>Вес, кг</td>
+                      <td>400</td>
+                    </tr>
+                    <tr>
+                      <td>Страна-производитель</td>
+                      <td>Франция</td>
+                    </tr>
+                    <tr>
+                      <td>Назначение:</td>
+                      <td>Для ежедневной уборки поверхностей из керамики, металла, пластика и других водостойких поверхностей</td>
+                    </tr>
+                    <tr>
+                      <td>Марка:</td>
+                      <td>Easywork</td>
+                    </tr>
+                    <tr>
+                      <td>Объем, мл:</td>
+                      <td>800</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="product-desc">
+                <div class="product-desc__top">
+                  <div class="alert alert_warning"> Integer nec suscipit nibh, at eleifend justo. </div>
+                </div>
+                <div class="product-desc__body">
+                  <table class="product-table">
+                    <tr>
+                      <td>Артикул</td>
+                      <td>4124214</td>
+                    </tr>
+                    <tr>
+                      <td>Вес, кг</td>
+                      <td>95</td>
+                    </tr>
+                    <tr>
+                      <td>Страна-производитель</td>
+                      <td>Норвегия</td>
+                    </tr>
+                    <tr>
+                      <td>Назначение:</td>
+                      <td>Для ежедневной уборки поверхностей из керамики, металла, пластика и других водостойких поверхностей</td>
+                    </tr>
+                    <tr>
+                      <td>Марка:</td>
+                      <td>Easywork</td>
+                    </tr>
+                    <tr>
+                      <td>Объем, мл:</td>
+                      <td>991</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="product-desc">
+                <div class="product-desc__top">
+                  <div class="alert alert_warning"> Nulla dolor quam, fermentum ut lorem vel, rutrum condimentum nisi. </div>
+                </div>
+                <div class="product-desc__body">
+                  <table class="product-table">
+                    <tr>
+                      <td>Артикул</td>
+                      <td>6439693</td>
+                    </tr>
+                    <tr>
+                      <td>Вес, кг</td>
+                      <td>241</td>
+                    </tr>
+                    <tr>
+                      <td>Страна-производитель</td>
+                      <td>Гондурас</td>
+                    </tr>
+                    <tr>
+                      <td>Назначение:</td>
+                      <td>Для ежедневной уборки поверхностей из керамики, металла, пластика и других водостойких поверхностей</td>
+                    </tr>
+                    <tr>
+                      <td>Марка:</td>
+                      <td>Easywork</td>
+                    </tr>
+                    <tr>
+                      <td>Объем, мл:</td>
+                      <td>975</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="product-desc">
+                <div class="product-desc__top">
+                  <div class="alert alert_warning"> Curabitur tincidunt molestie pretium. Sed bibendum tellus enim, vitae hendrerit sem aliquam sit amet. </div>
+                </div>
+                <div class="product-desc__body">
+                  <table class="product-table">
+                    <tr>
+                      <td>Артикул</td>
+                      <td>33231451312</td>
+                    </tr>
+                    <tr>
+                      <td>Вес, кг</td>
+                      <td>313</td>
+                    </tr>
+                    <tr>
+                      <td>Страна-производитель</td>
+                      <td>Финляндия</td>
+                    </tr>
+                    <tr>
+                      <td>Назначение:</td>
+                      <td>Для ежедневной уборки поверхностей из керамики, металла, пластика и других водостойких поверхностей</td>
+                    </tr>
+                    <tr>
+                      <td>Марка:</td>
+                      <td>Easywork</td>
+                    </tr>
+                    <tr>
+                      <td>Объем, мл:</td>
+                      <td>777</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="product-desc">
+                <div class="product-desc__top">
+                  <div class="alert alert_warning"> Proin cursus finibus diam sit amet finibus. Mauris eget accumsan orci, in interdum nulla. </div>
+                </div>
+                <div class="product-desc__body">
+                  <table class="product-table">
+                    <tr>
+                      <td>Артикул</td>
+                      <td>5923952395</td>
+                    </tr>
+                    <tr>
+                      <td>Вес, кг</td>
+                      <td>325</td>
+                    </tr>
+                    <tr>
+                      <td>Страна-производитель</td>
+                      <td>Китай</td>
+                    </tr>
+                    <tr>
+                      <td>Назначение:</td>
+                      <td>Для ежедневной уборки поверхностей из керамики, металла, пластика и других водостойких поверхностей</td>
+                    </tr>
+                    <tr>
+                      <td>Марка:</td>
+                      <td>Easywork</td>
+                    </tr>
+                    <tr>
+                      <td>Объем, мл:</td>
+                      <td>6320</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="product-desc">
+                <div class="product-desc__top">
+                  <div class="alert alert_warning"> Lorem Ipsum - это текст-&quot;рыба&quot;, часто используемый в печати и вэб-дизайне. </div>
+                </div>
+                <div class="product-desc__body">
+                  <table class="product-table">
+                    <tr>
+                      <td>Артикул</td>
+                      <td>534634192491</td>
+                    </tr>
+                    <tr>
+                      <td>Вес, кг</td>
+                      <td>246</td>
+                    </tr>
+                    <tr>
+                      <td>Страна-производитель</td>
+                      <td>Япония</td>
+                    </tr>
+                    <tr>
+                      <td>Назначение:</td>
+                      <td>Для ежедневной уборки поверхностей из керамики, металла, пластика и других водостойких поверхностей</td>
+                    </tr>
+                    <tr>
+                      <td>Марка:</td>
+                      <td>Easywork</td>
+                    </tr>
+                    <tr>
+                      <td>Объем, мл:</td>
+                      <td>567</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="product-desc">
+                <div class="product-desc__top">
+                  <div class="alert alert_warning"> «Пемолюкс» удаляет неприятные запахи </div>
+                </div>
+                <div class="product-desc__body">
+                  <table class="product-table">
+                    <tr>
+                      <td>Артикул</td>
+                      <td>539463</td>
+                    </tr>
+                    <tr>
+                      <td>Вес, кг</td>
+                      <td>888</td>
+                    </tr>
+                    <tr>
+                      <td>Страна-производитель</td>
+                      <td>Уругвай</td>
+                    </tr>
+                    <tr>
+                      <td>Назначение:</td>
+                      <td>Для ежедневной уборки поверхностей из керамики, металла, пластика и других водостойких поверхностей</td>
+                    </tr>
+                    <tr>
+                      <td>Марка:</td>
+                      <td>Easywork</td>
+                    </tr>
+                    <tr>
+                      <td>Объем, мл:</td>
+                      <td>973</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="product-desc">
+                <div class="product-desc__top">
+                  <div class="alert alert_warning"> Обеспечивает гигиеническую чистоту вашего жилища. </div>
+                </div>
+                <div class="product-desc__body">
+                  <table class="product-table">
+                    <tr>
+                      <td>Артикул</td>
+                      <td>9789786785</td>
+                    </tr>
+                    <tr>
+                      <td>Вес, кг</td>
+                      <td>493</td>
+                    </tr>
+                    <tr>
+                      <td>Страна-производитель</td>
+                      <td>Россия</td>
+                    </tr>
+                    <tr>
+                      <td>Назначение:</td>
+                      <td>Для ежедневной уборки поверхностей из керамики, металла, пластика и других водостойких поверхностей</td>
+                    </tr>
+                    <tr>
+                      <td>Марка:</td>
+                      <td>Easywork</td>
+                    </tr>
+                    <tr>
+                      <td>Объем, мл:</td>
+                      <td>312</td>
                     </tr>
                   </table>
                 </div>
